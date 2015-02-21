@@ -12,5 +12,9 @@ app.user = Backbone.Model.extend({
     // initialize function
     initialize: function () {
         console.log('A model instance named ' + this.get('name') + ' has been created.');
+
+        this.on('change', function() {
+           console.log("The user model for " + this.get('name') + " has changed.");
+        });
     }
 });
