@@ -1,0 +1,19 @@
+{
+  "name": "gdi-boston-backbone",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lvecchio/gdi-boston-backbone",
+  "authors": [
+    "Laura Vecchio <laura.m.vecchio@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.3"
+  }
+}
