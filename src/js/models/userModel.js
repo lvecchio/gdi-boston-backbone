@@ -2,7 +2,7 @@
 var app = app || {};
 
 // teacher model
-app.user = Backbone.Model.extend({
+app.userModel = Backbone.Model.extend({
 
     // model defaults
     defaults: {

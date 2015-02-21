@@ -7,6 +7,19 @@
 
     <body>
 
+        <div id="allUsers">
+
+        </div>
+
+        <!-- begin: user template -->
+        <script id="userElement" type="text/template">
+            <div> <%= name %> </div>
+            <div> <%= description %> </div>
+        </script>
+        <!-- end: user template -->
+
+
+
         <!-- begin: backbone js dependencies -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.1/underscore-min.js"></script>
@@ -20,6 +33,11 @@
         <!-- begin: backbone collections -->
         <script src="js/collections/usersCollection.js"></script>
         <!-- end: backbone collections -->
+
+        <!-- begin: backbone views -->
+        <script src="js/views/userView.js"></script>
+        <script src="js/views/usersView.js"></script>
+        <!-- end: backbone views -->
 
         <!-- begin: core app js -->
         <script src="js/gdiBoston.js"></script>
