@@ -21,6 +21,3 @@ var users = new app.usersCollection([
    user1, user2
 ]);
 
-// instantiate users view
-var usersView = new app.usersView({ collection: users });
-$('#users').html(usersView.render().el);
