@@ -6,7 +6,7 @@ app.userView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'user',
-    template: _.template( $('#userElement').html() ),
+    template: _.template( $('#userView').html() ),
 
     render: function() {
         var userTemplate = this.template(this.model.toJSON());

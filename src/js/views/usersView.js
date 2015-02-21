@@ -3,8 +3,6 @@ var app = app || {};
 
 // the view for all users
 app.usersView = Backbone.View.extend({
-    tagName: 'section',
-    className: 'users',
 
     render: function() {
         this.collection.each(this.addUser, this);
