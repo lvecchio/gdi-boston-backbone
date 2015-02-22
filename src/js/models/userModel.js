@@ -1,20 +1,23 @@
-// namespace
-var app = app || {};
+define(function(require) {
+    'use strict';
 
-// teacher model
-app.userModel = Backbone.Model.extend({
+    var Backbone = require('backbone');
 
-    // model defaults
-    defaults: {
-        name: 'GDI Boston Leader'
-    },
+    var User = Backbone.Collection.extend({
+        // model defaults
+        defaults: {
+            name: 'GDI Boston Leader'
+        },
 
-    // initialize function
-    initialize: function () {
-        console.log('A model instance named ' + this.get('name') + ' has been created.');
+        // initialize function
+        initialize: function () {
+            console.log('A model instance named ' + this.get('name') + ' has been created.');
 
-        this.on('change', function() {
-           console.log("The user model for " + this.get('name') + " has changed.");
-        });
-    }
-});
+            this.on('change', function() {
+                console.log("The user model for " + this.get('name') + " has changed.");
+            });
+        }
+    })
+
+    return User;
+})

@@ -1,6 +1,13 @@
-//namespace
-var app = app || {};
+define(function(require) {
+    'use strict';
 
-app.usersCollection = Backbone.Collection.extend({
-    model: app.user
-});
+    var Backbone = require('backbone');
+
+    var User = require('../models/userModel');
+
+    var UserCollection = Backbone.Collection.extend({
+        model: User
+    })
+
+    return UserCollection;
+})

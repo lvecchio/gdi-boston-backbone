@@ -1,27 +1,27 @@
-// namespace
-var app = app || {};
+define(function(require) {
 
-app.router = Backbone.Router.extend({
-    routes: {
-        'team':     'team',     // #team
-        'classes':  'classes',  // #classes
-        '*page':    'default'   // any page that doesn't match the above routes
-    },
+   'use strict';
 
-    team: function() {
+    var Backbone = require('backbone');
 
-        // instantiate users view
-        var usersView = new app.usersView({ collection: users });
-        $('#users').html(usersView.render().el);
+    var Router = Backbone.Router.extend({
+        routes: {
+            '':         'index',    // home
+            'team':     'team',     // #team
+            'classes':  'classes'   // #classes
+        },
 
-    },
+        index: function() {
+            console.log('home');
+        },
 
-    classes: function() {
+        team: function() {
 
-    }
+            $('#users').html( "hello" );
+            console.log('team');
+        }
+
+    });
+
+    return new Router();
 });
-
-app.router.init = new app.router;
-
-// allows back button to still trigger route methods
-Backbone.history.start();
